@@ -2,16 +2,14 @@
 # coding=utf-8
 #导入bs4下的美丽汤
 from bs4 import BeautifulSoup
-#导入se
+#导入lxml
 import lxml
 from selenium import webdriver
-# 继承父类为unittest.TestCase
 class Douyu_Spider(object):
     # 初始化方法
     def __init__(self):
         self.driver = webdriver.PhantomJS()
         self.num = 0
-        # 自定义的测试方法（必须以test开头）
     def Douyu(self):
         self.driver.get("https://www.douyu.com/directory/all")
         while True:
